@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>CashMachine ATM</title>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>CashMachine ATM</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-    <header>
-        
-        <div class="container">
-            
-            <p id="heading-text">CashMachine ATM</p>
-            <p class="status-text">Please insert your card</p>
-            
-        </div>
-        
-    </header>
-    
-    <div class="container">
-       
-        <input type="text" id="pin-input" placeholder="****" maxlength="4"><br>
-        
-        <button id="card-insert" onclick="insertCard()">Insert Card</button>
-        <button id="submit-pin" onclick="enterPIN()">Enter</button>
-        <button id="cancel-sub" onclick="cancelSub()">Cancel</button>
-        
+
+  <header>
+
+    <div class="container"><!-- This groups everything together -->
+
+      <p id="heading-text">CashMachine ATM</p>
+      <p class="status-text">Please insert your card</p>
+
     </div>
-    
-    <script src="script.js"></script>
-    
+
+  </header>
+
+  <div class="container">
+
+    <input type="text" id="pin-input" placeholder="****" maxlength="4"><br>
+
+    <button id="card-insert" onclick="insertCard()">Insert Card</button>
+    <button id="submit-pin" onclick="enterPIN()">Enter</button>
+    <button id="cancel-sub" onclick="cancelSub()">Cancel</button>
+
+  </div>
+
+  <script src="script.js"></script>
+
 </body>
+
 </html>
