@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CashMachine ATM</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        
+        <div class="container">
+            
+            <p id="heading-text">CashMachine ATM</p>
+            <p class="status-text">Make a choice</p>
+            
+        </div>
+        
+    </header>
+    
+    <div class="container">
+       
+        <!--<input type="text" id="pin-input" placeholder="****" maxlength="4"><br>
+        
+        <button id="card-insert" onclick="insertCard()">Insert Card</button>
+        <button id="submit-pin" onclick="enterPIN()">Enter</button>
+        <button id="cancel-sub">Cancel</button>-->
+        
+        <ul id="main-list">
+            
+            <li><a href="#">Cash Widthdrawal With Reciept</a></li>
+            <li><a href="#" onclick="withdrawCash()">Cash Widthdrawal No Reciept</a></li>
+            <li><a href="#" onclick="screenBalance()">On-Screen Balance</a></li>
+            <li><a href="#">Printed Balance</a></li>
+            <li><a href="#" onclick="changePin()">Change PIN</a></li>
+            <li><a href="#" onclick="returnCard()">Return Card</a></li>
+            
+        </ul>
+        
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
