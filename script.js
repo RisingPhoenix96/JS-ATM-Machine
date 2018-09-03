@@ -70,6 +70,8 @@ function enterPIN() {
 
 }
 
+var amountLeftToWithdraw = 450;
+
 function screenBalance() {
   alert("Your account balance is £" + accountBalance + ". £450 is available for withdrawal.");
 }
@@ -90,7 +92,7 @@ function withdrawCash() {
 
   } else if (cashAmount > accountBalance) {
 
-    alert("This ammount exceeds the account balance.");
+    alert("This amount exceeds the account balance.");
 
     withdrawCash();
 
