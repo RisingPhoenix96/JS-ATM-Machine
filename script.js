@@ -102,8 +102,6 @@ function withdrawCash() {
 
 }
 
-// Function below has errors, needs correction
-
 function changePin() {
 
   var pinVerification = prompt("Please verify your current PIN.");
@@ -115,16 +113,6 @@ function changePin() {
     alert("Correct");
 
     var newPin = prompt("Enter your new PIN.");
-
-    if (newPin == userPin) {
-
-      // If user enters their current PIN, machine refuses to accept the current PIN as the new PIN.
-
-      alert("You cannot use your current PIN as your new PIN. Please Enter a new PIN.");
-
-      newPin;
-
-    }
 
     userPin = newPin;
 
