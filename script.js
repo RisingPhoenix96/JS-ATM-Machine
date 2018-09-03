@@ -106,41 +106,45 @@ function withdrawCash() {
 
 function changePin() {
 
-  function checkPin() {
+  var pinVerification = prompt("Please verify your current PIN.");
 
-    prompt("Input your current PIN.");
+  pinVerification;
 
-  }
-
-  function newPin() {
-
-    prompt("Input your new PIN.")
-
-  }
-
-  checkPin();
-
-  if (checkPin.value == userPin) {
+  if (pinVerification == userPin) {
 
     alert("Correct");
 
-    newPin();
+    var newPin = prompt("Enter your new PIN.");
 
-    userPin = newPin.value;
+    if (newPin == userPin) {
+
+      // If user enters their current PIN, machine refuses to accept the current PIN as the new PIN.
+
+      alert("You cannot use your current PIN as your new PIN. Please Enter a new PIN.");
+
+      newPin;
+
+    }
+
+    userPin = newPin;
+
+    alert("Your PIN has been changed.");
 
   } else {
 
-    changePinInputCount++;
+    changePinInputCount++;// Counts number of times an incorrect PIN has been entered.
 
-    alert("Incorrect PIN. Try again.");
+    alert("You have entered an incorrect PIN.");
 
-    if (changePinInputCount === 2) {
+    pinVerification;
 
-      alert("You have entered an incorrect PIN 2 times. The next time will be your last chance to enter a correct PIN.");
+    if (changePinInputCount == 2) {
 
-    } else if (changePinInputCount === 3) {
+      alert("You have entered an incorrect PIN a second time. You have 1 try left.");
 
-      alert("You have reached the maximum limit of entries. Account is now locked, please contact your bank to unlock the account and request a new card.");
+    } else if (changePinInputCount == 3) {
+
+      alert("You have entered an incorrect PIN 3 times now. Account is now locked.");
 
       window.location.href = "index.html";
 
