@@ -70,10 +70,10 @@ function enterPIN() {
 
 }
 
-var amountLeftToWithdraw = 450;
+var amountLeftToWithdraw = 450; // Amount left for the user to withdraw.
 
 function screenBalance() {
-  alert("Your account balance is £" + accountBalance + ". £450 is available for withdrawal.");
+  alert("Your account balance is £" + accountBalance + ". £" + amountLeftToWithdraw + " is available for withdrawal.");
 }
 
 // Function below needs further functionality to ensure user does not perform multiple withdrawals that add up to more than £450.
@@ -99,6 +99,13 @@ function withdrawCash() {
   } else {
 
     accountBalance = accountBalance - cashAmount;
+    amountLeftToWithdraw = amountLeftToWithdraw - cashAmount;
+
+    if (amountLeftToWithdraw == 0 && cashAmount > amountLeftToWithdraw) {
+
+      alert("Maximum daily withdrawal limit reached.");
+
+    }
 
   }
 
